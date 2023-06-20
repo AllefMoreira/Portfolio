@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Body from './Body';
+import Sobre from './Infos/Sobre'
+import Projetos from './Infos/Projetos'
+import { useEffect, useState } from "react"
 
 function App() {
+
+  const [pagina, setPagina] = useState(0)
+
+  useEffect(() =>{
+    const url = window.location.href
+    const res = url.split('?')
+    setPagina(res[1])
+  })
+
+    const retornaPag = ()=>{
+        if(pagina == 1){
+            return <Sobre/>
+        } else if (pagina == 2){
+            return <Projetos/>
+        } else {
+          return <Body/>
+        }
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    retornaPag()
   );
 }
 
