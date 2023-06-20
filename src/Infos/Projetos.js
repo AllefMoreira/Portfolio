@@ -52,8 +52,8 @@ export default function Projeto(){
                     
                 </div>
                 <div className="projetos-navegacao">
-                        <a target="" href="http://localhost:3000?0">Home</a>
-                        <a target="" href="http://localhost:3000?1">Sobre</a>
+                        <a target="" href={window.location.href.split('/')[0] + '?0'}>Home</a>
+                        <a target="" href={window.location.href.split('/')[0] + '?1'}>Sobre</a>
                     </div>
             </div>
 

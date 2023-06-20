@@ -27,8 +27,8 @@ export default function Body(){
             </div>
 
             <div className="content"> 
-                <a target="" href="http://localhost:3000?2">Projetos</a>
-                <a target="" href="http://localhost:3000?1">Sobre</a>
+                <a target="" href= {window.location.href.split('/')[0] + '?2'} >Projetos</a>
+                <a target="" href= {window.location.href.split('/')[0] + '?1'} >Sobre</a>
             </div>
         </div>
     )

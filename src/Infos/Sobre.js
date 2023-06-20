@@ -35,9 +35,9 @@ export default function Sobre(){
                 </div>
 
                 <div className="Sobre-home">
-                    <a target="" href="http://localhost:3000?0">Home</a>
+                    <a target="" href={window.location.href.split('/')[0] + '?0'}>Home</a>
                     <a id="curriculo" onClick={baixaCurriculo}>Currículo</a>
-                    <a target="" href="http://localhost:3000?2">Projetos</a>
+                    <a target="" href={window.location.href.split('/')[0] + '?2'}>Projetos</a>
                 </div>
             </div>   
     )
